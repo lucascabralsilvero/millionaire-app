@@ -1,14 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-const Trivia = () => {
+const Trivia = ({data, setTimeOut, questionNumber, setQuestionNumber }) => {
+
+    const [question, setQuestion] = useState(null);
+    const [selectedAnswer, setSelectedAnswer] = useState(null);
+    const [className, setClassName] = useState("answer")
+    
+    useEffect(() => {
+        setQuestion(data[questionNumber - 1])
+    }, [data, questionNumber]);
+
+    const handleClick = (ans) => {
+            setSelectedAnswer(ans); 
+            setClassName("answer active")
+    }
+
   return (
     <div className='trivia'>
-        <div className='question'>asdasdasd</div>
+        <div className='question'>{question?.question}</div>
         <div className='answers'>
-            <div className="answer">1</div>
-            <div className="answer">2</div>
-            <div className="answer">3</div>
-            <div className="answer">4</div>
+            {question?.answers.map((ans, idx) =>(
+                <div key={idx} className={selectedAnswer === ans ? className : "answer" } onClick={ () => handleClick(ans)}>
+                    {ans.text}
+                </div>
+            ) )}
         </div>
     </div>
   )
