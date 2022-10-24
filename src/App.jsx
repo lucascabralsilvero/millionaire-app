@@ -2,9 +2,11 @@ import "./app.css";
 import React, {useEffect, useMemo, useState} from "react";
 import Trivia from "./components/Trivia";
 import Timer from "./components/Timer";
+import Start from "./components/Start"
 
 function App() {
 
+  const [userName, setUserName] = useState(null);
   const [questionNumber, setQuestionNumber] = useState(1);
   const [stop, setStop] = useState(false); 
   const [earned, setEarned] = useState("$ 0"); 
@@ -71,12 +73,277 @@ function App() {
           correct: false,
         },
         {
-          text: "Daniel Red Cliff",
+          text: "Daniel Radcliff",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 4,
+      question: "What did the composer Chopin die of?",
+      answers: [
+        {
+          text: "Heart Attack",
+          correct: false,
+        },
+        {
+          text: "Tuberculosis",
+          correct: true,
+        },
+        {
+          text: "Acute Kidney Failure",
+          correct: false,
+        },
+        {
+          text: "Stomach Cancer",
+          correct: false,
+        },
+      ],
+    },  
+    {
+      id: 5,
+      question: "Which saint founded the Abbey of Montecasino?",
+      answers: [
+        {
+          text: "Benito",
+          correct: true,
+        },
+        {
+          text: "Bernardo",
+          correct: false,
+        },
+        {
+          text: "Buenaventura",
+          correct: false,
+        },
+        {
+          text: "Bonifacio",
+          correct: false,
+        },
+      ],
+    },  
+    {
+      id: 6,
+      question: "Which of these names does not appear in the title of a play by Shakespeare?",
+      answers: [
+        {
+          text: "Hamlet",
+          correct: false,
+        },
+        {
+          text: "Leonardo Di Caprio",
+          correct: false,
+        },
+        {
+          text: "Denzel Washington",
+          correct: false,
+        },
+        {
+          text: "Daniel Radcliff",
           correct: true,
         },
       ],
     },  
+    {
+      id: 7,
+      question: "Who played the character of harry potter in movie?",
+      answers: [
+        {
+          text: "Hamlet",
+          correct: false,
+        },
+        {
+          text: "Romeo",
+          correct: false,
+        },
+        {
+          text: "MacBeth",
+          correct: false,
+        },
+        {
+          text: "Darren",
+          correct: true,
+        },
+      ],
+    },  
+    {
+      id: 8,
+      question: "In elegant hotels, what snack is usually left on the pillows?",
+      answers: [
+        {
+          text: "Pretzel",
+          correct: false,
+        },
+        {
+          text: "Apple",
+          correct: false,
+        },
+        {
+          text: "Strawberrie",
+          correct: false,
+        },
+        {
+          text: "Mint",
+          correct: true,
+        },
+      ],
+    },  
+    {
+      id: 9,
+      question: "In the court of which king Leonardo Da Vinci spent the last two years of his life?",
+      answers: [
+        {
+          text: "Enrique IV",
+          correct: false,
+        },
+        {
+          text: "Carlos III",
+          correct: false,
+        },
+        {
+          text: "Luis XII",
+          correct: false,
+        },
+        {
+          text: "Francisco I",
+          correct: true,
+        },
+      ],
+    },  
+    {
+      id: 10,
+      question: "Which of the following men does not have a chemical element named after him?",
+      answers: [
+        {
+          text: "Albert Einstein",
+          correct: true,
+        },
+        {
+          text: "Niels Bohr",
+          correct: false,
+        },
+        {
+          text: "Isaac Newton",
+          correct: false,
+        },
+        {
+          text: "Enrico Fermi",
+          correct: false,
+        },
+      ],
+    },  
+    {
+      id: 11,
+      question: "Who was the first man to travel twice into space?",
+      answers: [
+        {
+          text: "Vladimir Titov",
+          correct: false,
+        },
+        {
+          text: "Gus Grissom",
+          correct: true,
+        },
+        {
+          text: "Yuri Gagarin",
+          correct: false,
+        },
+        {
+          text: "Yuri Gagarin",
+          correct: false,
+        },
+      ],
+    },  
+    {
+      id: 12,
+      question: "Each chromatic component of white light in transparent bodies moves at a different speed. The fastest color in that sense is the?",
+      answers: [
+        {
+          text: "Red",
+          correct: true,
+        },
+        {
+          text: "Orange",
+          correct: false,
+        },
+        {
+          text: "Yellow",
+          correct: false,
+        },
+        {
+          text: "Purple",
+          correct: false,
+        },
+      ],
+    },  
+    {
+      id: 13,
+      question: "The Venetian merchant Marco Polo was an official at the court of?",
+      answers: [
+        {
+          text: " Kumiai Khan",
+          correct: true,
+        },
+        {
+          text: "Tameriano el magnífico",
+          correct: false,
+        },
+        {
+          text: "Saladino",
+          correct: false,
+        },
+        {
+          text: "Iván The Terrible",
+          correct: false,
+        },
+      ],
+    },  
+    {
+      id: 14,
+      question: "In 1718, which pirate was killed in battle off the coast of what is now North Carolina?",
+      answers: [
+        {
+          text: "Calico Jack",
+          correct: false,
+        },
+        {
+          text: "Barbanegra",
+          correct: true,
+        },
+        {
+          text: "Bartholomew Roberts",
+          correct: false,
+        },
+        {
+          text: "Capitán Kidd",
+          correct: false,
+        },
+      ],
+    },  
+    {
+      id: 15,
+      question: "There are three European cities that preserve original manuscripts of the Mayan civilization. Which of these cities does not have them?",
+      answers: [
+        {
+          text: "Madrid",
+          correct: false,
+        },
+        {
+          text: "Rome",
+          correct: false,
+        },
+        {
+          text: "Dresden",
+          correct: false,
+        },
+        {
+          text: "Paris",
+          correct: true,
+        },
+      ],
+    },    
   ]
+
   const moneyPyramid = useMemo(() =>
 
     [
@@ -151,7 +418,10 @@ function App() {
 
   return (
     <div className="app">
-     <div className="main">
+      {userName ? (
+        <>
+
+<div className="main">
       {stop ? <h1 className="endText">You earned: {earned} </h1> : (
         <>
       <div className="top">
@@ -175,6 +445,9 @@ function App() {
         }
       </ul>
      </div>
+        </>
+      ) : <Start setUserName = {setUserName} />}
+     
     </div>
   );
 }

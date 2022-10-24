@@ -6,6 +6,7 @@ import wrong from "../sounds/src_sounds_wrong.mp3"
 
 const Trivia = ({data, setStop, questionNumber, setQuestionNumber }) => {
 
+
     const [question, setQuestion] = useState(null);
     const [selectedAnswer, setSelectedAnswer] = useState(null);
     const [className, setClassName] = useState("answer");
@@ -13,9 +14,9 @@ const Trivia = ({data, setStop, questionNumber, setQuestionNumber }) => {
     const [correctAnswer] = useSound(correct);
     const [wrongAnswer] = useSound(wrong); 
 
-    useEffect(() => {
+     useEffect(() => {
         letsPlay();
-    }, [letsPlay]);
+     }, [letsPlay]);
 
 
     const delay = (duration, callback) => {
