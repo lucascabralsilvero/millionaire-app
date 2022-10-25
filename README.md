@@ -1,11 +1,9 @@
-# Millionaire App - 
+# Millionaire App 
 
 ![Millionaire App](https://i.ibb.co/hV38v07/Screenshot-1.png "millionaire")
 
-Proyecto Final para el curso de ReactJS de la academia Coderhouse. 
-La aplicación permite seleccionar productos, navegar a sus detalles, agregarlos al carrito, poder acceder a él y simular la compra de los mismos.
-Al "realizar una compra", se solicita completar un formulario con datos básicos y luego se genera un id de orden para el usuario, dicha orden se almacena en 
-Firebase con los datos de los productos comprados. 
+Proyecto basado en el popular programa de televisión "¿Quién quiere ser millonario?, para este proyecto decidí utilizar css puro para los 
+estilos y la librería use-sound para manejar los efectos de sonido de la página, para brindar una mejor experiencia. 
 
 ## Tecnologías y librerías utilizadas
 
@@ -38,4 +36,4 @@ Sino copiar esta URL y pegarla en el navegador: http://localhost:3000
 
 ## Deploy
 
-*Mira el sitio en vivo aquí :* [ Link del deploy "Nombre")
+*Mira el sitio en vivo aquí :* [ https://millionaire-react-app.netlify.app/ "millionaire-app")
