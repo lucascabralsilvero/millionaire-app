@@ -131,38 +131,38 @@ function App() {
           correct: false,
         },
         {
-          text: "Leonardo Di Caprio",
-          correct: false,
-        },
-        {
-          text: "Denzel Washington",
-          correct: false,
-        },
-        {
-          text: "Daniel Radcliff",
-          correct: true,
-        },
-      ],
-    },  
-    {
-      id: 7,
-      question: "Who played the character of harry potter in movie?",
-      answers: [
-        {
-          text: "Hamlet",
-          correct: false,
-        },
-        {
           text: "Romeo",
-          correct: false,
-        },
-        {
-          text: "MacBeth",
           correct: false,
         },
         {
           text: "Darren",
           correct: true,
+        },
+        {
+          text: "MacBeth",
+          correct: false,
+        },
+      ],
+    },  
+    {
+      id: 7,
+      question: "What is the title of Lewis Carroll's poem composed of nonsense words?",
+      answers: [
+        {
+          text: "Gibberish",
+          correct: false,
+        },
+        {
+          text: "Jabberwocky",
+          correct: true,
+        },
+        {
+          text: "Twaddle",
+          correct: false,
+        },
+        {
+          text: "Gobbledygook",
+          correct: false,
         },
       ],
     },  
@@ -175,16 +175,16 @@ function App() {
           correct: false,
         },
         {
-          text: "Apple",
-          correct: false,
+          text: "Mint",
+          correct: true,
         },
         {
           text: "Strawberrie",
           correct: false,
         },
         {
-          text: "Mint",
-          correct: true,
+          text: "Apple",
+          correct: false,
         },
       ],
     },  
@@ -201,12 +201,12 @@ function App() {
           correct: false,
         },
         {
-          text: "Luis XII",
-          correct: false,
-        },
-        {
           text: "Francisco I",
           correct: true,
+        },
+        {
+          text: "Luis XII",
+          correct: false,
         },
       ],
     },  
@@ -281,8 +281,8 @@ function App() {
       question: "The Venetian merchant Marco Polo was an official at the court of?",
       answers: [
         {
-          text: " Kumiai Khan",
-          correct: true,
+          text: "Ivan The Terrible",
+          correct: false,
         },
         {
           text: "Tameriano el magnífico",
@@ -293,8 +293,8 @@ function App() {
           correct: false,
         },
         {
-          text: "Iván The Terrible",
-          correct: false,
+          text: "Kumiai Khan",
+          correct: true,
         },
       ],
     },  
@@ -422,7 +422,7 @@ function App() {
         <>
 
 <div className="main">
-      {stop ? <h1 className="endText">You earned: {earned} </h1> : (
+      {stop ? <div className="finalScreen"> <h1>You earned: {earned} </h1> <button className="btn" onClick={() => window.location.reload()}>Retry</button> </div> : (
         <>
       <div className="top">
         <div className="timer"><Timer setStop={setStop} questionNumber={questionNumber} /></div>
@@ -434,6 +434,7 @@ function App() {
       </> ) }
      </div>
      <div className="pyramid">
+     <h2 className="username">Welcome {userName}</h2>
       <ul className="moneyList">
         {
           moneyPyramid.map((money, idx) =>(
